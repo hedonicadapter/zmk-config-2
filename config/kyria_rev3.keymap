@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &led_strip {
     chain-length = <24>;
@@ -44,7 +45,7 @@
             bindings = <
 &none           &none             &none             &kp UP          &kp SV_AMPERSAND   &kp SV_PIPE                                                                 &none                 &none              &none          &none  &none  &none
 &none           &none             &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT          &kp SV_ACUTE                                                                &kp SV_DOUBLE_QUOTES  &kp SV_APOSTROPHE  &none          &none  &none  &none
-&kp LEFT_SHIFT  &kp LEFT_BRACKET  &kp SV_LESS_THAN  &kp SV_SLASH    &kp SV_LEFT_BRACE  &kp SV_LEFT_PARENTHESIS  &none         &none      &none      &none  &none                 &none              &none          &none  &none  &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp LEFT_BRACKET  &kp SV_LESS_THAN  &kp SV_SLASH    &kp SV_LEFT_BRACE  &kp SV_LEFT_PARENTHESIS  &none         &none      &mkp LCLK      &mkp RCLK  &none                 &none              &none          &none  &none  &kp RIGHT_SHIFT
                                                     &kp LEFT_ALT    &kp LCTRL          &kp LEFT_GUI             &kp SV_SPACE  &kp ENTER  &kp BACKSPACE  &kp ESC    &kp RIGHT_GUI         &kp RCTRL          &kp RIGHT_ALT
             >;
         };
