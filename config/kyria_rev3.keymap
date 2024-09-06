@@ -29,13 +29,11 @@
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&kp ESC         &kp Q  &kp W  &kp E         &kp R      &kp T                                                       &kp Y              &kp U      &kp I          &kp O       &kp P            &kp SV_A_RING
-&kp TAB         &kp A  &kp S  &kp D         &kp F      &kp G                                                       &kp H              &kp J      &kp K          &kp L       &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B         &none      &mo 1      &mo 2          &none    &kp N              &kp M      &kp COMMA      &kp SV_DOT  &kp MINUS        &kp RIGHT_SHIFT
-                              &kp LEFT_ALT  &kp LCTRL  &kp LEFT_GUI  &kp SPACE  &kp ENTER  &kp BACKSPACE  &kp ESC  &kp DOUBLE_QUOTES  &kp RCTRL  &kp RIGHT_ALT
+&kp ESC         &kp Q  &kp W  &kp E         &kp R      &kp T                                                          &kp Y          &kp U      &kp I          &kp O       &kp P            &kp SV_A_RING
+&kp TAB         &kp A  &kp S  &kp D         &kp F      &kp G                                                          &kp H          &kp J      &kp K          &kp L       &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B         &none         &mo 1      &mo 2          &none    &kp N          &kp M      &kp SV_COMMA   &kp SV_DOT  &kp SV_MINUS     &kp RIGHT_SHIFT
+                              &kp LEFT_ALT  &kp LCTRL  &kp LEFT_GUI  &kp SV_SPACE  &kp ENTER  &kp BACKSPACE  &kp ESC  &kp RIGHT_GUI  &kp RCTRL  &kp RIGHT_ALT
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         left {
@@ -46,21 +44,19 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
 
             bindings = <
-&trans               &none           &kp UP          &none           &none                 &none                                                           &trans  &trans  &trans     &trans  &trans  &trans
-&none                &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT       &kp EQUAL             &kp AMPERSAND                                                   &trans  &trans  &trans     &trans  &trans  &trans
-&kp SV_LEFT_BRACKET  &kp LESS_THAN   &kp SV_SLASH    &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp APOS       &trans  &trans          &trans           &trans  &trans  &trans  &trans     &trans  &trans  &trans
-                                                     &kp LCTRL       &trans                &trans         &trans  &kp LEFT_SHIFT  &kp RIGHT_SHIFT  &trans  &trans  &trans  &kp RCTRL
+&none           &none             &none             &kp UP          &kp SV_AMPERSAND   &kp SV_PIPE                                                                 &none                 &none              &none          &none  &none  &none
+&none           &none             &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT          &kp SV_ACUTE                                                                &kp SV_DOUBLE_QUOTES  &kp SV_APOSTROPHE  &none          &none  &none  &none
+&kp LEFT_SHIFT  &kp LEFT_BRACKET  &kp SV_LESS_THAN  &kp SV_SLASH    &kp SV_LEFT_BRACE  &kp SV_LEFT_PARENTHESIS  &none         &none      &mkp LCLK      &mkp RCLK  &none                 &none              &none          &none  &none  &kp RIGHT_SHIFT
+                                                    &kp LEFT_ALT    &kp LCTRL          &kp LEFT_GUI             &kp SV_SPACE  &kp ENTER  &kp BACKSPACE  &kp ESC    &kp RIGHT_GUI         &kp RCTRL          &kp RIGHT_ALT
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         right {
             bindings = <
-&kp N0                &kp N1  &kp N2         &kp N3           &kp N4                 &kp N5                                                         &kp N6  &kp N7  &kp N8     &kp N9  &kp QUESTION  &trans
-&none                 &none   &none          &none            &none                  &kp PIPE                                                       &trans  &trans  &trans     &trans  &trans        &trans
-&kp SV_RIGHT_BRACKET  &kp GT  &kp BACKSLASH  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp SV_ACUTE  &trans  &trans          &trans           &trans  &trans  &trans  &trans     &trans  &trans        &trans
-                                             &kp LCTRL        &trans                 &trans        &trans  &kp LEFT_SHIFT  &kp RIGHT_SHIFT  &trans  &trans  &trans  &kp RCTRL
+&kp SV_N0       &kp SV_N1             &kp SV_N2            &kp SV_N3         &kp SV_N4           &kp SV_N5                                                                   &kp SV_N6             &kp SV_N7            &kp SV_N8  &kp SV_N9  &kp SV_QUESTION  &none
+&none           &none                 &none                &none             &none               &kp SV_GRAVE                                                                &kp SV_DOUBLE_QUOTES  &kp SV_SINGLE_QUOTE  &none      &none      &none            &none
+&kp LEFT_SHIFT  &kp SV_RIGHT_BRACKET  &kp SV_GREATER_THAN  &kp SV_BACKSLASH  &kp SV_RIGHT_BRACE  &kp SV_RIGHT_PARENTHESIS  &none         &none       &none          &none    &none                 &none                &none      &none      &none            &kp RIGHT_SHIFT
+                                                           &kp LALT          &kp LCTRL           &kp LGUI                  &kp SV_SPACE  &kp RETURN  &kp BACKSPACE  &kp ESC  &kp RGUI              &kp RCTRL            &kp RALT
             >;
         };
     };
